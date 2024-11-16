@@ -3,12 +3,7 @@
 @tailwind utilities;
 
 
-.headlines {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.subtitles {
-  font-size: 1rem;
-  font-weight: 400;
+a.active{
+  background-color: hsl(344, 74%, 48%);
+  color: white;
 }
