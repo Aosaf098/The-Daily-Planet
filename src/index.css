@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.headlines {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.subtitles {
+  font-size: 1rem;
+  font-weight: 400;
+}
