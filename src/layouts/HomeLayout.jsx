@@ -13,11 +13,11 @@ const HomeLayout = () => {
         <Header />
         <Latest />
         <Navbar />
-        <menu className="mt-14 lg:grid lg:grid-cols-12">
-            <aside className="lg:col-span-3 lg:block mb-10">
+        <menu className="mt-14 lg:grid lg:grid-cols-12 gap-10">
+            <aside className="lg:col-span-2 lg:block mb-10">
                 <LeftNavbar />
             </aside>
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-7">
                 <Outlet />
             </div>
             <aside className="lg:col-span-3">
