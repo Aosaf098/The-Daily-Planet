@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       <nav className="flex justify-between items-center px-12">
         <div>
-          <h3 className="text-lg font-bold">{user && user.email}</h3>
+          <h3 className="text-lg font-bold">{user && user?.email}</h3>
         </div>
         <div className="block lg:hidden">
           <details className="dropdown">
@@ -25,7 +25,7 @@ const Navbar = () => {
           </details>
         </div>
         <div className="hidden lg:block">
-          <ul className="flex items-center gap-10 text-normal font-semibold ml-24">
+          <ul className="flex items-center gap-10 text-normal font-semibold">
             <Link to={"/category/01"}>Home</Link>
             <Link>About</Link>
             <Link>Career</Link>

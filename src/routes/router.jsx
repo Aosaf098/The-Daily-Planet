@@ -4,6 +4,7 @@ import CategoryNews from "../Components/CategoryNews";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import NewsDetails from "../Pages/NewsDetails";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             element: <Register />,
         }
     ]
+  },
+  {
+    path: '/news/:id',
+    element: <NewsDetails />
   }
 ]);
 

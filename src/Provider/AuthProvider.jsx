@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
@@ -13,25 +14,11 @@ const AuthProvider = ({ children }) => {
   console.log(user);
 
   const createNewUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential.user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    return createUserWithEmailAndPassword(auth, email, password)
   };
 
   const signInUser = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential.user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    return signInWithEmailAndPassword(auth, email, password)
   };
 
   const signOutUser = () => {
@@ -44,6 +31,7 @@ const AuthProvider = ({ children }) => {
         const errorMessage = error.message;
       });
   };
+  
   const authInfo = {
     user,
     setUser,

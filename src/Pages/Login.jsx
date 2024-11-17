@@ -5,7 +5,7 @@ import auth from "../firebase/firebase.config";
 
 const Login = () => {
 
-    const {signInUser} = useContext(AuthContext)
+    const {setUser, signInUser} = useContext(AuthContext)
     
     const handleLogInSubmit = e => {
         e.preventDefault()
@@ -14,16 +14,17 @@ const Login = () => {
         const email = form.get('email')
         const password = form.get('password')
 
-        signInUser(auth, email, password)
+        signInUser(email, password)
         .then(result => {
             const user = result.user
             console.log(user)
+            setUser(user)
         })
         .catch((error) => {
-            const errorCode = error.code
-            const errorMessage = error.message
+            alert(error.code)
         })
     }
+
   return (
     <>
       <div className="bg-base-100 w-full max-w-xl py-10 px-16 shrink-0 shadow-xl rounded-2xl">
