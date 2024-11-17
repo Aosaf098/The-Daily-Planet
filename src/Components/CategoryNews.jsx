@@ -7,8 +7,8 @@ const CategoryNews = () => {
   return (
     <>
       <div className="">
-        <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-xl mb-2 lg:text-left text-center">
+        <div className="flex items-center justify-between flex-wrap">
+          <h3 className="font-semibold text-xl mb-2 w-full lg:w-auto">
             Daily Planet Home
           </h3>
           <p className="font-normal text-gray-500">
